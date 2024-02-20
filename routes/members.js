@@ -14,7 +14,7 @@ router.get('/find/:phone', async (req, res) => {
     }
   });
 
-  if(!member){
+  if (!member) {
     return res.json({
       status: 404,
       message: 'Anggota tidak ditemukan!'
@@ -35,7 +35,7 @@ router.get('/presence/:phone', async (req, res) => {
     }
   });
 
-  if(!member){
+  if (!member) {
     return res.json({
       status: 404,
       message: 'Anggota tidak ditemukan!'
@@ -58,13 +58,14 @@ router.get('/presence/:phone', async (req, res) => {
 });
 
 router.get('/cancel/:phone', async (req, res) => {
+
   let member = await Member.findOne({
     where: {
       phone: req.params.phone,
     }
   });
 
-  if(!member){
+  if (!member) {
     return res.json({
       status: 404,
       message: 'Anggota tidak ditemukan!'
@@ -80,13 +81,13 @@ router.get('/cancel/:phone', async (req, res) => {
   })
 
   return res.json({
-    status: 200,
     message: 'Anggota ditemukan!',
     data: member
   });
 });
 
 router.post('/', async (req, res) => {
+
   const { name, phone, notes } = req.body;
   let data = {
     name: name,
