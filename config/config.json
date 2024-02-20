@@ -1,10 +1,11 @@
 {
   "development": {
-    "username": "root",
-    "password": "lp3itasik",
+    "username": "lp3i",
+    "password": null,
     "database": "eventpresence_db",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres",
+    "port": "5432"
   },
   "test": {
     "username": "root",
@@ -14,10 +15,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "postgres",
+    "password": "lp3itasikpsql",
+    "database": "eventpresence_db",
+    "host": "103.163.111.39",
+    "dialect": "postgres",
+    "port": 5432
   }
 }

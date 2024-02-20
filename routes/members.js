@@ -50,12 +50,6 @@ router.get('/presence/:phone', async (req, res) => {
     }
   })
 
-  member = await Member.findOne({
-    where: {
-      id: member.id,
-    }
-  });
-
   return res.json({
     status: 200,
     message: 'Anggota ditemukan!',
@@ -84,12 +78,6 @@ router.get('/cancel/:phone', async (req, res) => {
       id: member.id
     }
   })
-
-  member = await Member.findOne({
-    where: {
-      id: member.id
-    }
-  });
 
   return res.json({
     status: 200,
