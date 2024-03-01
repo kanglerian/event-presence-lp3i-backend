@@ -147,11 +147,10 @@ router.post('/import', upload.single('file'), async (req, res) => {
   let members = [];
   dataArray.forEach(data => {
     let memberDummy = data.split(',');
-    let notes = memberDummy[2].replace(/-/g, '\n');
     let member = {
       name: memberDummy[0],
       phone: memberDummy[1],
-      notes: notes
+      notes: memberDummy[2]
     };
     members.push(member);
   });
